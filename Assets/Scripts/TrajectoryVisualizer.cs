@@ -44,7 +44,8 @@ namespace CompasXR.Robots
         public Dictionary<string, string> URDFRenderComponents = new Dictionary<string, string>();
 
         //List of available robots
-        public List<string> RobotURDFList = new List<string> {"UR3", "UR5", "UR10e", "ETHZurichRFL"};
+        public List<string> URDFList = new List<string> {"UR3", "UR5", "UR10e", "ETHZurichRFL", "UR20"};
+        public List<string> RobotURDFList = new List<string> {"UR3", "UR5", "UR10e", "ETHZurichRFL", "UR20"};
             
         ////////////////////////////////////////// Monobehaviour Methods ////////////////////////////////////////////////////////
         void Start()
