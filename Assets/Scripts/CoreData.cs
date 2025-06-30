@@ -140,6 +140,18 @@ namespace CompasXR.Core.Data
 
                     break;
 
+                case "compas.geometry/Sphere":
+                    
+                    node.part.dtype = dtype;
+                    node.part.frame = Frame.Parse(dataDict["frame"]);
+
+                    node.attributes.length = 0.00f;
+                    node.attributes.width = 0.00f;
+                    node.attributes.height = 0.00f;
+                    node.attributes.instructions = dataDict["instructions"]?.ToString() ?? string.Empty;
+
+                    break;
+
                 case "compas.geometry/Frame":
                     
                     node.part.dtype = dtype;
@@ -171,6 +183,7 @@ namespace CompasXR.Core.Data
                     node.attributes.length = 0.00f;
                     node.attributes.width = 0.00f;
                     node.attributes.height = 0.00f;
+                    
 
                     break;
 
@@ -244,6 +257,17 @@ namespace CompasXR.Core.Data
                     node.attributes.height = zsize;
 
                     break;
+
+                case "compas.geometry/Sphere":
+                    
+                    node.part.dtype = dtype;
+                    node.part.frame = Frame.Parse(dataDict["frame"]);
+
+                    node.attributes.length = 0.00f;
+                    node.attributes.width = 0.00f;
+                    node.attributes.height = 0.00f;
+
+                    break;
                 
                 case "compas.datastructures/Mesh":
 
@@ -311,6 +335,7 @@ namespace CompasXR.Core.Data
                 }
                 else if (part.dtype != "compas.geometry/Frame" || 
                         part.dtype != "compas.datastructures/Mesh" ||
+                        part.dtype != "compas.geometry/Sphere" ||
                         part.dtype != "compas_xr/QRCode")
                 {
                     if (attributes != null &&
@@ -355,6 +380,7 @@ namespace CompasXR.Core.Data
         public float length { get; set; }
         public float width { get; set; }
         public float height { get; set; }
+        public string instructions { get; set; }
     } 
 
     [System.Serializable]
@@ -588,6 +614,7 @@ namespace CompasXR.Core.Data
         public bool is_built { get; set; }
         public bool is_planned { get; set; }
         public int priority { get; set; }
+        public string instructions { get; set; }
 
         public static Data Parse(object jsondata)
         {
@@ -619,6 +646,7 @@ namespace CompasXR.Core.Data
             data.is_built = (bool)dataDict["is_built"];
             data.is_planned = (bool)dataDict["is_planned"];
             data.priority = (int)(long)dataDict["priority"];
+            data.instructions = dataDict["instructions"]?.ToString() ?? string.Empty;
 
             List<object> element_ids = dataDict["element_ids"] as List<object>;
             if (element_ids != null)

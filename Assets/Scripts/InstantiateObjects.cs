@@ -274,10 +274,15 @@ namespace CompasXR.Core
                         string basepath = Application.persistentDataPath;
                         string folderpath = Path.Combine(basepath, "Object_Storage");
                         string filepath = Path.Combine(folderpath, step.data.element_ids[0]+".obj");
+                        string filepath_prefab = Path.Combine(folderpath, step.data.instructions + ".obj");
 
                         if (File.Exists(filepath))
                         {
-                            element =  new OBJLoader().Load(filepath);
+                            element = new OBJLoader().Load(filepath);
+                        }
+                        else if (File.Exists(filepath_prefab))
+                        {
+                            element = new OBJLoader().Load(filepath_prefab);
                         }
                         else
                         {
