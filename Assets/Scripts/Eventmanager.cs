@@ -38,7 +38,9 @@ namespace CompasXR.Core
             //Initilization functionalities for the application.
             Caching.ClearCache();
             FirebaseDatabase.DefaultInstance.SetPersistenceEnabled(false);
-            dbReferenceSettings =  FirebaseDatabase.DefaultInstance.GetReference("ApplicationSettings");
+            //TODO: CHANGE THIS TO THE LINE BELOW, BUT NEED CUSTOM WRITE on CAD
+            dbReferenceSettings =  FirebaseDatabase.DefaultInstance.GetReference("ApplicationSettings2");
+            // dbReferenceSettings =  FirebaseDatabase.DefaultInstance.GetReference("ApplicationSettings");
             
             //Add script components to objects in the scene
             databaseManager = databaseManagerObject.AddComponent<DatabaseManager>();  

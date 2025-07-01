@@ -28,6 +28,9 @@ namespace CompasXR.Core
         private GameObject ObjectLengthsTags;
         private GameObject ActiveRobotObjects;
 
+        //TODO: Joe Added this line
+        private GameObject ARObjects;
+
         //Public Scripts
         public InstantiateObjects instantiateObjects;
         public UIFunctionalities uiFunctionalities;
@@ -39,10 +42,10 @@ namespace CompasXR.Core
         //In script use variables
         public Vector3 pos;
         private string lastQrName = "random";
-        
+
         //////////////////////////// Monobehaviour Methods //////////////////////////////
         void Start()
-        {   
+        {
             /*
             * The Start Method is called before the first frame update
             * and is used to initialize the required variables and objects.
@@ -52,12 +55,16 @@ namespace CompasXR.Core
             instantiateObjects = GameObject.Find("Instantiate").GetComponent<InstantiateObjects>();
             uiFunctionalities = GameObject.Find("UIFunctionalities").GetComponent<UIFunctionalities>();
             databaseManager = GameObject.Find("DatabaseManager").GetComponent<DatabaseManager>();
-            
+
             //Find GameObjects that need to be transformed
             Elements = GameObject.Find("Elements");
             UserObjects = GameObject.Find("ActiveUserObjects");
             ObjectLengthsTags = GameObject.Find("ObjectLengthsTags");
             ActiveRobotObjects = GameObject.Find("ActiveRobotObjects");
+
+            //TODO: Joe Added this line
+            ARObjects = GameObject.Find("ARObjects");
+
         }
         void Update()
         {
@@ -94,6 +101,9 @@ namespace CompasXR.Core
                         ObjectTransformations.TranslateGameObjectByImageTarget(UserObjects, qrObject, QRCodeDataDict[key].part.frame.point, QRCodeDataDict[key].part.frame.xaxis, QRCodeDataDict[key].part.frame.yaxis);
                         ObjectTransformations.TranslateGameObjectByImageTarget(ObjectLengthsTags, qrObject, QRCodeDataDict[key].part.frame.point, QRCodeDataDict[key].part.frame.xaxis, QRCodeDataDict[key].part.frame.yaxis);
                         ObjectTransformations.TranslateGameObjectByImageTarget(ActiveRobotObjects, qrObject, QRCodeDataDict[key].part.frame.point, QRCodeDataDict[key].part.frame.xaxis, QRCodeDataDict[key].part.frame.yaxis);
+
+                        //TODO: Joe Added this line
+                        ObjectTransformations.TranslateGameObjectByImageTarget(ARObjects, qrObject, QRCodeDataDict[key].part.frame.point, QRCodeDataDict[key].part.frame.xaxis, QRCodeDataDict[key].part.frame.yaxis);
 
                         //Update position of line objects in the scene
                         if (uiFunctionalities.ObjectLengthsToggleObject.GetComponent<Toggle>().isOn)
