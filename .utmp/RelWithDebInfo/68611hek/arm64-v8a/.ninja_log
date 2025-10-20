@@ -1,13 +1,5 @@
 # ninja log v5
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-1	252	7826139496288889	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	310ec18dcc75dfba
-268	994	7826139500589754	C:/Users/jk6372/Desktop/00_princeton_projects/02_caad_futures/00_github/CompasXRUnity_CAADFutures/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/68611hek/obj/arm64-v8a/libswappywrapper.so	379a0572cf903dc9
-=======
-3	203	7730853752771781	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	310ec18dcc75dfba
-206	484	7730853754683556	C:/Users/jk6372/Desktop/00_princeton_projects/02_caad_futures/00_github/CompasXRUnity_CAADFutures/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/68611hek/obj/arm64-v8a/libswappywrapper.so	379a0572cf903dc9
->>>>>>> Stashed changes
-=======
-3	203	7730853752771781	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	310ec18dcc75dfba
-206	484	7730853754683556	C:/Users/jk6372/Desktop/00_princeton_projects/02_caad_futures/00_github/CompasXRUnity_CAADFutures/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/68611hek/obj/arm64-v8a/libswappywrapper.so	379a0572cf903dc9
->>>>>>> Stashed changes
+3	167	7826219845442909	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	310ec18dcc75dfba
+173	606	7826219848120303	C:/Users/jk6372/Desktop/00_princeton_projects/02_caad_futures/00_github/CompasXRUnity_CAADFutures/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/68611hek/obj/arm64-v8a/libswappywrapper.so	379a0572cf903dc9
+3	152	7826223083169473	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	310ec18dcc75dfba
+154	571	7826223085709775	C:/Users/jk6372/Desktop/00_princeton_projects/02_caad_futures/00_github/CompasXRUnity_CAADFutures/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/68611hek/obj/arm64-v8a/libswappywrapper.so	379a0572cf903dc9
