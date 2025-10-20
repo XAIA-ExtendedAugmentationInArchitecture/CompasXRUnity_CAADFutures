@@ -358,7 +358,7 @@ namespace CompasXR.UI
             RobotSelectionControlObjects = GameObject.Find("RobotSelectionControls");
             RobotSelectionDropdownObject = RobotSelectionControlObjects.FindObject("RobotSelectionDropdown");
             RobotSelectionDropdown = RobotSelectionDropdownObject.GetComponent<TMP_Dropdown>();
-            List<TMP_Dropdown.OptionData> robotOptions = UserInterface.SetDropDownOptionsFromStringList(RobotSelectionDropdown ,trajectoryVisualizer.URDFList);
+            List<TMP_Dropdown.OptionData> robotOptions = UserInterface.SetDropDownOptionsFromStringList(RobotSelectionDropdown ,trajectoryVisualizer.NewURDFList);
             RobotSelectionDropdown.onValueChanged.AddListener(RobotSelectionDropdownValueChanged);
             if(RobotSelectionControlObjects == null)
             {
